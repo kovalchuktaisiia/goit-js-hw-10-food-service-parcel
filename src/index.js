@@ -38,5 +38,5 @@ function changeTheme (evt) {
 }
 
 if (body.classList.contains(theme.DARK)) {
-    ckeckbox.ptop('checked', true);
+    ckeckbox.prop('checked', true);
 }
