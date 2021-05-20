@@ -23,3 +23,20 @@ const Theme = {
       localStorage.setItem('theme', Theme.LIGHT);
   }
 
+body.classList = localStorage.getItem('theme');
+
+const changeTheme = function () {
+    if (body.classList === Theme.LIGHT) {
+        body.classList.remove(Theme.LIGHT);
+        body.classList.add(Theme.DARK);
+    }
+
+    if (body.classList === Theme.DARK) {
+        body.classList.remove(Theme.DARK);
+        body.classList.add(Theme.LIGHT);
+    }
+}
+
+if (body.classList.contains(theme.DARK)) {
+    ckeckbox.ptop('checked', true);
+}
