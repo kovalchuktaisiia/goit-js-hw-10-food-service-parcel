@@ -25,7 +25,7 @@ const Theme = {
 
 body.classList = localStorage.getItem('theme');
 
-const changeTheme = function () {
+function changeTheme (evt) {
     if (body.classList === Theme.LIGHT) {
         body.classList.remove(Theme.LIGHT);
         body.classList.add(Theme.DARK);
