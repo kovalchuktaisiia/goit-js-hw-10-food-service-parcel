@@ -26,17 +26,18 @@ const Theme = {
 body.classList = localStorage.getItem('theme');
 
 function changeTheme (evt) {
-    if (body.classList === Theme.LIGHT) {
+    if (evt.target.checked) {
         body.classList.remove(Theme.LIGHT);
         body.classList.add(Theme.DARK);
+        localStorage.setItem('theme', Theme.DARK);
+        return;
     }
 
-    if (body.classList === Theme.DARK) {
         body.classList.remove(Theme.DARK);
         body.classList.add(Theme.LIGHT);
-    }
+        localStorage.setItem('theme', Theme.LIGHT);
 }
 
 if (body.classList.contains(theme.DARK)) {
-    ckeckbox.prop('checked', true);
+    ckeckbox.checked = true;
 }
