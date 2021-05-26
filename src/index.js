@@ -38,6 +38,6 @@ function changeTheme (evt) {
         localStorage.setItem('theme', Theme.LIGHT);
 }
 
-if (body.classList.contains(theme.DARK)) {
-    ckeckbox.checked = true;
-}
+if (body.classList.value === Theme.DARK) {
+    checkbox.checked = true;
+  }
